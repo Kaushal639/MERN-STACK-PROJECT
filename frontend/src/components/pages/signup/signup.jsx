@@ -4,6 +4,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
 function SignUpForm() {
+    const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const Navigate = useNavigate();
 
 const [user,setUser]=useState({
@@ -23,7 +24,7 @@ const [user,setUser]=useState({
      
     e.preventDefault()
     
-const res=await axios.post(`process.env.BACKEND_URL/signup`, user)
+const res=await axios.post(`${apiUrl}/signup`, user)
     if(res.status==200){
        alert("login sucessfull")
       Navigate("/");

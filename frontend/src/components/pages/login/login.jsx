@@ -5,7 +5,9 @@ import axios from "axios";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
 
+
 function Login(){
+ const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const [userlogin,setUserlogin]=useState({
     email:"",
     password:""
@@ -15,7 +17,7 @@ function Login(){
   async function  handlelogin(e){
     e.preventDefault()
     try{
-const response=await axios.post("process.env.BACKEND_URL/login", userlogin)
+const response=await axios.post(`${apiUrl}/login`, userlogin)
     if(response.status==200){
       navigate("/");
       alert("login sucessfull")
