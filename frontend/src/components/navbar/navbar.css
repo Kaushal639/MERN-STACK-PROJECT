@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 12vh;
+  width: 100vw;
+  background-color: rgb(39, 68, 59);
+  position: relative;
+  padding-right: 2vw;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  color: white;
+  margin-left: 2vw;
+}
+
+.logo-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  width: 5vw;
+  border: 2px solid grey;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.org-name h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: white;
+  border: none;
+  border-radius: 8vw;
+  padding: 0.5rem 1rem;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.li:hover {
+  background-color: rgb(51, 115, 95);
+  transform: translateY(-2px);
+  border-radius: 8vw;;
+}
+
+.menu-bar {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 2vw;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .main{
+        width: 100%;
+        padding-right: 4vh;
+
+    }
+  .menu-bar {
+    display: block;
+  }
+
+  .right-nav {
+    flex-direction: column;
+    position: absolute;
+    top: 12vh; /* below navbar */
+    right: 0;
+    width: 100%;
+    background: #062b1c;
+    display: none;
+    padding: 2vh 0;
+    z-index: 999;
+  }
+
+  .right-nav.show {
+    display: flex;
+  }
+
+  .ul {
+    flex-direction: column;
+    gap: 1vh;
+  }
+
+  .li {
+    font-size: 2.5vh;
+    margin: 1vh 0;
+    width: 100%;
+    text-align: center;
+  }
+  .left-nav{
+    width:30vh;
+
+  }
+  .logo-image{
+    height:7vh;
+    width:7vh;
+  }
+  .org-name h1{
+    font-size: 4vh;
+  }
+
+}

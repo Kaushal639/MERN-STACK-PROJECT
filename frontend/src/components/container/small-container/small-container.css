@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+
+}
+.small-main{
+    height:30vh;
+    width: 25vw;
+    background: #0b3e31;
+    color: rgb(145, 162, 162);
+     border: 2px solid rgb(225, 217, 217);
+     border-radius: 2vw;
+    display:flex;
+    margin: 0.4vw;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 2vw;
+    flex-shrink: 0;
+}
+.small-main:hover{
+    scale:1.05;
+
+}
+@media(max-width:600px){
+    .small-main{
+    height:fit-content;
+    width: 41vh;
+   
+        border-radius: 5vw;}
+   
+}

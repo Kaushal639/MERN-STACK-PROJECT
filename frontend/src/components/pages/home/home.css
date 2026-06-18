@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.header-main{
+    height:80vh;
+    width:100vw;
+    display:flex;
+    justify-content: space-between ;
+    align-items: center;
+
+}
+.imagesection{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px-solid black;
+    border-radius: 50%;
+    height: 50vw;
+    width:40vw;
+    overflow: hidden;
+
+}
+#home-img{
+    
+height:30vw;
+width:30vw;
+border-radius: 50%;
+margin-right:3vw;
+}
+.left-side{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:3vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 3vw;
+}
+.heading{
+    height:fit-content;
+    width: 45vw;
+    font-size: 2.8vw;
+    animation: updown 5s ease-in 0s infinite normal ;
+}
+.button1{
+     height:fit-content;
+    width: 45vw;
+    font-size: 2.8vw;
+    margin-left: 2vw;
+}
+
+ @keyframes updown{
+    0%{
+        transform: translate(0px,0px);
+    
+    }
+    50%{
+        transform: translate(0px,8px);
+        
+
+    }
+        90%{
+        transform: translate(0px,-8px);
+        
+    }
+   
+ }
+.paragraph{
+     height:fit-content;
+    width: 45vw;
+    font-size: 1.5vw;
+}
+
+.right-side{
+    animation: imgmove 8s ease-in-out 1s 1 normal ;
+      
+}
+ @keyframes imgmove{
+    0%{
+        transform: translate(0px,0px);
+    
+    }
+    20%{
+        transform: translate(-20px,0px);
+        scale: 0.8;
+
+    }
+    40%{
+        transform: translate(20px,0px);
+        scale:0.6;
+    }
+        60%{
+        transform: translate(0px,30px);
+        scale: 0.8;
+    }
+    
+        80%{
+        transform: translate(0px,-30px);
+        scale: 1;
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+ }
+
+ @media (max-width:600px){
+    .header-main{
+    height:130vh;
+    width:50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3vh;
+    padding-right: 3vh;
+
+
+}
+.paragraph{
+     height:fit-content;
+    width: 40vh;
+    font-size: 8vw;
+    margin-left: -5vw;
+}
+.heading{
+    height:fit-content;
+    width: 45vh;
+    font-size: 10vw;
+    animation: updown 5s ease-in 0s infinite normal ;
+    margin: 2vh;
+}
+.button1{
+  
+    width: 45vh;
+    font-size: 8vw;
+    margin-left: 2vw;
+}
+#home-img{
+    
+height:50vh;
+width:50vh;
+border-radius: 50%;
+}
+.imagesection{
+   
+    height: 43vh;
+    width:43vh;
+   
+margin-left: -8vw;
+}
+
+ }
