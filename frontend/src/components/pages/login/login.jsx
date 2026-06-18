@@ -15,7 +15,7 @@ function Login(){
   async function  handlelogin(e){
     e.preventDefault()
     try{
-const response=await axios.post("http://localhost:3000/login", userlogin)
+const response=await axios.post("process.env.BACKEND_URL/login", userlogin)
     if(response.status==200){
       navigate("/");
       alert("login sucessfull")

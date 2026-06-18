@@ -23,7 +23,7 @@ const [user,setUser]=useState({
      
     e.preventDefault()
     
-const res=await axios.post(`http://localhost:3000/signup`, user)
+const res=await axios.post(`process.env.BACKEND_URL/signup`, user)
     if(res.status==200){
        alert("login sucessfull")
       Navigate("/");
